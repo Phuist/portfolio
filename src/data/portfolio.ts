@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     "I'm a passionate Software Engineer focused on building minimal, functional, and user-centric web applications. I love working with modern web technologies and continuously learning new things to improve my craft.",
   email: "tranlethanhphu.252005@gmail.com",
   github: "https://github.com/thanphuuuuu",
-  linkedin: "https://linkedin.com/in/",
+  linkedin: "https://linkedin.com/in/tran-le-thanh-phu/",
 
   // Skills
   skills: [
