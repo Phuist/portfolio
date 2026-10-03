@@ -7,7 +7,7 @@ export const portfolioData: PortfolioData = {
   about:
     "I'm a passionate Software Engineer focused on building minimal, functional, and user-centric web applications. I love working with modern web technologies and continuously learning new things to improve my craft.",
   email: "tranlethanhphu.252005@gmail.com",
-  github: "https://github.com/thanphuuuuu",
+  github: "https://github.com/Phuist",
   linkedin: "https://linkedin.com/in/tran-le-thanh-phu/",
 
   // Skills
@@ -17,9 +17,10 @@ export const portfolioData: PortfolioData = {
     "Node.js",
     "Next.js",
     "Tailwind CSS",
-    "Framer Motion",
+    "Nest.js",
     "Docker",
     "Git",
+    "GitHub Action",
     "PostgreSQL",
     "MongoDB",
   ],
@@ -77,7 +78,7 @@ export const portfolioData: PortfolioData = {
         "The app allows you to write down the tasks you need to do during the day.",
       image: "/images/proj1-todoX.jpg",
       techStack: ["React", "Tailwind CSS", "NodeJS", "MongoDB"],
-      githubUrl: "https://github.com/thanphuuuuu/todoX",
+      githubUrl: "https://github.com/Phuist/todoX",
       demoUrl: "https://todox-xfa8.onrender.com/",
     },
     {
@@ -87,7 +88,7 @@ export const portfolioData: PortfolioData = {
         "A simple and elegant blog application for sharing thoughts and ideas.",
       image: "/images/proj2-blog-app.png",
       techStack: ["React", "NestJS", "TypeORM", "Postgress", "Tailwind CSS"],
-      githubUrl: "https://github.com/thanphuuuuu/blog-app",
+      githubUrl: "https://github.com/Phuist/blog-app",
       demoUrl: "https://blog-app-frontend-woad.vercel.app/",
     },
   ],
