@@ -18,7 +18,7 @@ export const portfolioData: PortfolioData = {
 
   // Skills divided into Languages and Tools
   skills: {
-    languages: [, "TypeScript", "JavaScript", "SQL"],
+    languages: ["TypeScript", "JavaScript", "SQL"],
     tools: [
       "React",
       "Node.js",

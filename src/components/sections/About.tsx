@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
 import { portfolioData } from "../../data/portfolio";
-import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 
 export function About() {
   // Safe skill categorization fallback
