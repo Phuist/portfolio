@@ -5,7 +5,7 @@ const links = [
   { name: "Home", href: "#home" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "About", href: "#about" },
+  { name: "About Me", href: "#about" },
 ];
 
 export function Nav({ className }: { className?: string }) {
@@ -18,14 +18,14 @@ export function Nav({ className }: { className?: string }) {
         "fixed top-6 left-1/2 -translate-x-1/2 z-50",
         "bg-white/80 backdrop-blur-md border border-zinc-200 shadow-md",
         "w-[90vw] max-w-2xl px-10 py-4 rounded-2xl",
-        className
+        className,
       )}
     >
       <ul className="flex items-center justify-between text-base font-medium text-zinc-600">
         {links.map((link) => (
           <li key={link.name}>
-            <a 
-              href={link.href} 
+            <a
+              href={link.href}
               className="inline-block hover:scale-110 hover:text-black transition-all duration-300"
             >
               {link.name}

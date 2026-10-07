@@ -16,19 +16,20 @@ export interface Experience {
   description: string[];
 }
 
-export interface Skill {
-  name: string;
-  icon?: string;
+export interface SkillCategory {
+  languages: string[];
+  tools: string[];
 }
 
 export interface PortfolioData {
   name: string;
   role: string;
   about: string;
+  aboutParagraphs?: string[];
   email: string;
   github: string;
   linkedin: string;
   experience: Experience[];
   projects: Project[];
-  skills: string[];
+  skills: string[] | SkillCategory;
 }
