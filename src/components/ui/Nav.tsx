@@ -15,13 +15,13 @@ export function Nav({ className }: { className?: string }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "fixed top-6 left-1/2 -translate-x-1/2 z-50",
-        "bg-white/80 backdrop-blur-md border border-zinc-200 shadow-md",
-        "w-[90vw] max-w-2xl px-10 py-4 rounded-2xl",
+        "fixed top-3 left-1/2 -translate-x-1/2 z-50",
+        "bg-white/80 backdrop-blur-md border border-back inset-shadow-indigo-500/50",
+        "w-[95vw] max-w-4xl px-26 py-2 rounded-xl",
         className,
       )}
     >
-      <ul className="flex items-center justify-between text-base font-medium text-zinc-600">
+      <ul className="flex items-center justify-between text-base font-[14px] text-zinc-600">
         {links.map((link) => (
           <li key={link.name}>
             <a

@@ -14,22 +14,22 @@ export function Hero() {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 text-zinc-900">
+        <h1 className="text-4xl md:text-8xl font-extrabold tracking-tighter mb-6 text-zinc-900">
           Thanh Phu
         </h1>
         <p className="text-xl md:text-2xl text-zinc-600 mb-10 font-medium">
           “What we think, we become.”
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-8 justify-center">
           <a
             href="#projects"
-            className="px-8 py-4 bg-zinc-900 text-white rounded-full font-medium hover:bg-zinc-800 transition-colors w-full sm:w-auto"
+            className="px-6 py-3 bg-zinc-800 text-white rounded-xl font-medium hover:bg-zinc-800 transition-colors w-full sm:w-auto"
           >
             My Projects
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 bg-white text-zinc-900 border border-zinc-200 rounded-full font-medium hover:bg-zinc-50 transition-colors w-full sm:w-auto"
+            className="px-6 py-3 bg-[#23232333] text-zinc-900 border border-zinc-200 rounded-xl font-medium hover:bg-[#23232344] transition-colors w-full sm:w-auto"
           >
             Contact me
           </a>

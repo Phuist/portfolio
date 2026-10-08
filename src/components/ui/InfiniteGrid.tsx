@@ -30,7 +30,7 @@ export function InfiniteGrid({ className }: { className?: string }) {
                  - translateY(-50px): Đẩy mặt lưới lên trên (-) hoặc xuống dưới (+). Đẩy số âm lớn hơn (vd: -100px, -150px) để nâng đường chân trời lên gần thanh Nav.
                  - translateZ(-200px): Đẩy mặt lưới lùi xa (-) hoặc tiến lại gần (+) tầm mắt.
             */
-            transform: "rotateX(40deg) translateY(-50px) translateZ(-100px)",
+            transform: "rotateX(40deg) translateY(-50px) translateZ(-150px)",
           }}
         />
       </div>
@@ -40,7 +40,7 @@ export function InfiniteGrid({ className }: { className?: string }) {
            - Làm mờ dần lưới ra 4 góc xung quanh, giữ cho vùng giữa màn hình nổi bật.
            - #fafafa 75%: Đổi % nhỏ hơn (vd: 50%) để quầng sáng thu hẹp lại, hoặc lớn hơn (85%) để thấy nhiều lưới hơn.
       */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#fafafa_85%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#fafafa_75%)]" />
 
       {/* 
         5. LỚP PHỦ MỜ ĐỈNH VÀ ĐÁY MÀN HÌNH (LINEAR GRADIENT):
