@@ -1,51 +1,102 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { portfolioData } from "../../data/portfolio";
+import { Building2 } from "lucide-react";
+
+function CompanyLogo({
+  logo,
+  company,
+  companyUrl,
+}: {
+  logo?: string;
+  company: string;
+  companyUrl?: string;
+}) {
+  const [imgError, setImgError] = useState(false);
+
+  useEffect(() => {
+    setImgError(false);
+  }, [logo]);
+
+  const content = (
+    <div className="w-10 h-10 md:w-11 md:h-11 bg-white border border-zinc-300 flex items-center justify-center overflow-hidden shrink-0 transition-transform duration-200 group-hover/logo:scale-105 group-hover/logo:border-black">
+      {logo && !imgError ? (
+        <img
+          src={logo}
+          alt={`${company} logo`}
+          className="w-full h-full object-contain p-1"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <Building2 className="w-5 h-5 text-zinc-500" />
+      )}
+    </div>
+  );
+
+  if (companyUrl) {
+    return (
+      <a
+        href={companyUrl}
+        target="_blank"
+        rel="noreferrer"
+        title={`Visit ${company}`}
+        className="group/logo inline-block cursor-pointer"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+}
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 max-w-3xl mx-auto px-6">
+    <section id="experience" className="py-16 md:py-24 max-w-5xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        className="border-l-2 border-teal-600/90 pl-4 md:pl-6 relative"
       >
-        <h2 className="text-[48px] font-bold tracking-tight mb-12">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 mb-8">
           Experience
         </h2>
 
-        <div className="relative border-l border-zinc-200 ml-3 md:ml-0 space-y-12">
+        <div className="space-y-4">
           {portfolioData.experience.map((exp, index) => (
             <motion.div
               key={exp.id}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="relative pl-8 md:pl-10"
+              className="group bg-white hover:bg-[#e8e8e8] rounded-none p-5 md:px-4 md:py-2 transition-colors duration-300 border border-black flex items-center justify-between gap-4 cursor-pointer"
             >
-              {/* Dot Icon */}
-              <div className="absolute w-3 h-3 bg-zinc-900 rounded-full -left-[6.5px] top-2" />
-
-              <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
-                <h3 className="text-xl font-bold text-zinc-900">{exp.role}</h3>
-                <span className="text-sm font-medium text-zinc-500 mt-1 md:mt-0">
+              {/* Main Content: Company / Role & Duration */}
+              <div>
+                <h3 className="text-lg md:text-xl text-zinc-900 tracking-tight">
+                  <span className="font-bold text-zinc-900">{exp.company}</span>
+                  <span className="text-zinc-600 font-normal">
+                    {" "}
+                    / {exp.role}
+                  </span>
+                </h3>
+                <p className="text-sm text-zinc-500 font-medium mt-1">
                   {exp.duration}
-                </span>
+                </p>
               </div>
-              <p className="text-emerald-500 font-medium mb-4">{exp.company}</p>
 
-              <ul className="space-y-2">
-                {exp.description.map((desc, i) => (
-                  <li
-                    key={i}
-                    className="flex gap-2 items-start text-zinc-600 leading-relaxed text-[16px]"
-                  >
-                    <span className="text-zinc-400 mr-2">•</span>
-                    {desc}
-                  </li>
-                ))}
-              </ul>
+              {/* Right Side: Company Logo (Clickable Link) */}
+              <div className="flex items-center">
+                <CompanyLogo
+                  logo={exp.logo}
+                  company={exp.company}
+                  companyUrl={exp.companyUrl}
+                />
+              </div>
             </motion.div>
           ))}
         </div>

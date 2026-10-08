@@ -13,7 +13,9 @@ export interface Experience {
   role: string;
   company: string;
   duration: string;
-  description: string[];
+  type?: string;
+  logo?: string;
+  companyUrl?: string;
 }
 
 export interface SkillCategory {
