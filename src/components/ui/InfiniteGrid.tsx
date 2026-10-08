@@ -22,7 +22,7 @@ export function InfiniteGrid({ className }: { className?: string }) {
                - opacity-90: Độ hiển thị của lưới (chỉnh thành opacity-30, opacity-50, opacity-70... tùy độ đậm mong muốn).
                - animate-grid-move: Hiệu ứng chuyển động (tốc độ chỉnh trong src/index.css).
           */
-          className="absolute w-[300vw] h-[290vh] bg-grid opacity-90 animate-grid-move"
+          className="absolute w-[300vw] h-[290vh] bg-grid opacity-50 animate-grid-move"
           style={{
             /* 
               3. CÁC THÔNG SỐ BIẾN ĐỔI 3D (TRANSFORM):
@@ -40,7 +40,7 @@ export function InfiniteGrid({ className }: { className?: string }) {
            - Làm mờ dần lưới ra 4 góc xung quanh, giữ cho vùng giữa màn hình nổi bật.
            - #fafafa 75%: Đổi % nhỏ hơn (vd: 50%) để quầng sáng thu hẹp lại, hoặc lớn hơn (85%) để thấy nhiều lưới hơn.
       */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#fafafa_75%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#fafafa_95%)]" />
 
       {/* 
         5. LỚP PHỦ MỜ ĐỈNH VÀ ĐÁY MÀN HÌNH (LINEAR GRADIENT):

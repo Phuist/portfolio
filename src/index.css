@@ -11,7 +11,7 @@
 @layer utilities {
   .bg-grid {
     /* KÍCH THƯỚC Ô LƯỚI: Đổi 60px để lưới to/nhỏ hơn (Lưu ý: Phải đổi cả số 60px ở @keyframes bên dưới) */
-    background-size: 100px 150px;
+    background-size: 60px 60px;
     /* MÀU SẮC LƯỚI: Thay đổi rgba(0, 0, 0, 0.3) để đổi màu sắc hoặc độ nhạt/đậm của vạch kẻ */
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.8) 1px, transparent 1px),
@@ -20,7 +20,7 @@
 
   .animate-grid-move {
     /* TỐC ĐỘ LƯỚI: Đổi 10s thành số nhỏ hơn (để chạy nhanh hơn) hoặc lớn hơn (để chạy chậm hơn) */
-    animation: grid-move 1s linear infinite;
+    animation: grid-move 0.3s linear infinite;
   }
 }
 
@@ -30,7 +30,7 @@
   }
   100% {
     /* CHÚ Ý KHỚP VỚI KÍCH THƯỚC Ô LƯỚI: Đổi 60px theo background-size ở trên để chuyển động lặp lại mượt mà */
-    background-position: 0 150px;
+    background-position: 0 60px;
   }
 }
 

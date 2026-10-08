@@ -28,7 +28,7 @@ export function Hero() {
             My Projects
           </a>
           <a
-            href="#contact"
+            href="#about"
             className="px-6 py-3 bg-[#23232333] text-zinc-900 border border-zinc-200 rounded-xl font-medium hover:bg-[#23232344] transition-colors w-full sm:w-auto"
           >
             Contact me
