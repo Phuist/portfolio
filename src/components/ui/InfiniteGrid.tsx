@@ -8,47 +8,33 @@ export function InfiniteGrid({ className }: { className?: string }) {
         className,
       )}
     >
-      {/* 
-        1. ĐỘ SÂU 3D (PERSPECTIVE): 
-           - Chỉnh [perspective:400px]: 
-           - Số càng nhỏ (vd: 300px - 400px) -> Hiệu ứng hút sâu 3D càng gắt và tạo độ dốc lớn.
-           - Số càng lớn (vd: 800px - 1000px) -> Mặt phẳng lưới trông càng phẳng nhẹ nhàng.
-      */}
-      <div className="absolute inset-0 [perspective:400px] flex items-center justify-center">
+      {/* 1. KHUNG PHỐI CẢNH 3D VỚI ĐƯỜNG CHÂN TRỜI */}
+      <div className="absolute inset-0 [perspective:350px] [perspective-origin:50%_40%] flex items-center justify-center">
         <div
           /* 
-            2. KÍCH THƯỚC & ĐỘ ĐẬM LƯỚI:
-               - w-[300vw] h-[290vh]: Chiều rộng & cao mặt phẳng lưới (nên để lớn hơn màn hình để khi xoay 3D không lộ viền).
-               - opacity-90: Độ hiển thị của lưới (chỉnh thành opacity-30, opacity-50, opacity-70... tùy độ đậm mong muốn).
-               - animate-grid-move: Hiệu ứng chuyển động (tốc độ chỉnh trong src/index.css).
+            2. MẶT PHẲNG LƯỚI 3D:
+               - rotateX(72deg): Góc nghiêng gắt tạo độ nén phối cảnh cực mạnh ở xa.
+               - translateY(120px): Đẩy xuống để đường chân trời nằm đúng vị trí.
           */
-          className="absolute w-[300vw] h-[290vh] bg-grid opacity-50 animate-grid-move"
+          className="absolute w-[300vw] h-[300vh] bg-grid opacity-70 animate-grid-move"
           style={{
-            /* 
-              3. CÁC THÔNG SỐ BIẾN ĐỔI 3D (TRANSFORM):
-                 - rotateX(40deg): Góc nghiêng ngửa/gập của mặt sàn. (Góc từ 40deg - 75deg cho cảm giác mặt sàn 3D).
-                 - translateY(-50px): Đẩy mặt lưới lên trên (-) hoặc xuống dưới (+). Đẩy số âm lớn hơn (vd: -100px, -150px) để nâng đường chân trời lên gần thanh Nav.
-                 - translateZ(-200px): Đẩy mặt lưới lùi xa (-) hoặc tiến lại gần (+) tầm mắt.
-            */
-            transform: "rotateX(55deg) translateY(-50px) translateZ(-150px)",
+            transform: "rotateX(72deg) translateY(120px) translateZ(-50px)",
           }}
         />
       </div>
 
       {/* 
-        4. LỚP PHỦ QUẦNG SÁNG TRUNG TÂM (RADIAL GRADIENT):
-           - Làm mờ dần lưới ra 4 góc xung quanh, giữ cho vùng giữa màn hình nổi bật.
-           - #fafafa 75%: Đổi % nhỏ hơn (vd: 50%) để quầng sáng thu hẹp lại, hoặc lớn hơn (85%) để thấy nhiều lưới hơn.
+        3. HIỆU ỨNG ĐƯỜNG CHÂN TRỜI (HORIZON MIST & SKY FADE):
+           - Phía trên chân trời (bầu trời): Giữ nền sáng sạch sẽ (#fafafa).
+           - Ngay tại đường chân trời: Lưới chụm lại dày đặc và tan nhẹ vào không gian.
+           - Phía dưới đáy: Làm mờ nhẹ vùng sát mép dưới.
       */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#fafafa_95%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#fafafa] from-0% via-[#fafafa] via-35% via-transparent via-45% to-[#fafafa] to-95%" />
 
       {/* 
-        5. LỚP PHỦ MỜ ĐỈNH VÀ ĐÁY MÀN HÌNH (LINEAR GRADIENT):
-           - Che mờ viền trên (gần Nav) và viền dưới để lưới tan vào nền một cách tự nhiên.
-           -from-[#fafafa]: Đỉnh trên cùng mờ trắng.
-           - to-[#fafafa]: Đáy dưới cùng mờ trắng.
+        4. LỚP PHỦ LÀM DỊU 2 BÊN MÉP (VIGNETTE MỀM):
       */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#fafafa] via-transparent to-[#fafafa]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,#fafafa_95%)]" />
     </div>
   );
 }
