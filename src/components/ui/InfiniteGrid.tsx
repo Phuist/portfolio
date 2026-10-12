@@ -30,7 +30,7 @@ export function InfiniteGrid({ className }: { className?: string }) {
                  - translateY(-50px): Đẩy mặt lưới lên trên (-) hoặc xuống dưới (+). Đẩy số âm lớn hơn (vd: -100px, -150px) để nâng đường chân trời lên gần thanh Nav.
                  - translateZ(-200px): Đẩy mặt lưới lùi xa (-) hoặc tiến lại gần (+) tầm mắt.
             */
-            transform: "rotateX(40deg) translateY(-50px) translateZ(-150px)",
+            transform: "rotateX(55deg) translateY(-50px) translateZ(-150px)",
           }}
         />
       </div>

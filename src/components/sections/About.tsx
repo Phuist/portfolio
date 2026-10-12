@@ -30,7 +30,7 @@ export function About() {
         : [];
 
   return (
-    <section id="about" className="py-24 max-w-6xl mx-auto px-0">
+    <section id="about" className="py-16 md:py-24 max-w-6xl mx-auto px-6 sm:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,23 +38,23 @@ export function About() {
         transition={{ duration: 0.5 }}
       >
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-[48px] font-bold tracking-tight text-zinc-900 leading-tight">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-[48px] font-bold tracking-tight text-zinc-900 leading-tight">
             About Me
           </h2>
           {/* Accent Underline Bar */}
           <div className="w-16 h-1 bg-teal-600 rounded-full mx-auto my-3" />
-          <p className="text-zinc-500 text-[18px] max-w-2xl mx-auto font-normal">
+          <p className="text-zinc-500 text-base md:text-[18px] max-w-2xl mx-auto font-normal">
             Below you'll find some more information about me as well as a
             highlight of some of my technical skills.
           </p>
         </div>
 
-        {/* 2-Column Main Content */}
+        {/* Main Content: On mobile: Skills (order-1), A Bit About Me (order-2); On desktop: 2 columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Column: A Bit About Me & Contact */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold tracking-tight text-zinc-900">
+          {/* A Bit About Me & Contact: order-2 on mobile, order-1 on desktop */}
+          <div className="space-y-6 order-2 lg:order-1">
+            <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900">
               A Bit About Me
             </h3>
             <div className="space-y-4 text-zinc-600 leading-relaxed text-[18px]">
@@ -67,8 +67,8 @@ export function About() {
             {(portfolioData.github ||
               portfolioData.email ||
               portfolioData.linkedin) && (
-              <div className="pt-6 flex items-center gap-4">
-                <h4 className="text-3xl font-bold text-zinc-900 tracking-tight">
+              <div className="pt-6 flex flex-wrap items-center gap-4">
+                <h4 className="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">
                   Contact Me!
                 </h4>
                 <div className="flex items-center gap-3">
@@ -129,9 +129,9 @@ export function About() {
             )}
           </div>
 
-          {/* Right Column: Skills */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold tracking-tight text-zinc-900 text-center">
+          {/* Skills: order-1 on mobile, order-2 on desktop */}
+          <div className="space-y-6 order-1 lg:order-2">
+            <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 text-center">
               Skills
             </h3>
 

@@ -38,7 +38,7 @@ export const portfolioData: PortfolioData = {
   experience: [
     {
       id: "exp-1",
-      role: "Backend Developer Intern",
+      role: "Backend Developer Intern (fake information)",
       company: "Tech Company",
       duration: "2024 — PRESENT",
       type: "INTERN",
@@ -47,7 +47,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "exp-2",
-      role: "Freelance Web Developer",
+      role: "Freelance Web Developer (fake information)",
       company: "Self-Employed",
       duration: "2023 — 2024",
       type: "FREELANCE",
