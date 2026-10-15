@@ -36,23 +36,23 @@ export const portfolioData: PortfolioData = {
 
   // Experience
   experience: [
+    // {
+    //   id: "exp-2",
+    //   role: "Freelance Web Developer (fake information)",
+    //   company: "Self-Employed",
+    //   duration: "2023 — 2024",
+    //   type: "FREELANCE",
+    //   logo: "/images/company-logo.png",
+    //   companyUrl: "https://github.com",
+    // },
     {
       id: "exp-1",
-      role: "Backend Developer Intern (fake information)",
-      company: "Tech Company",
-      duration: "2024 — PRESENT",
+      role: "Backend Developer Intern",
+      company: "GTEL OTS",
+      duration: "Oct 2026 — Present",
       type: "INTERN",
-      logo: "/images/company/nextjs.png",
-      companyUrl: "https://nextjs.org",
-    },
-    {
-      id: "exp-2",
-      role: "Freelance Web Developer (fake information)",
-      company: "Self-Employed",
-      duration: "2023 — 2024",
-      type: "FREELANCE",
-      logo: "/images/company-logo.png",
-      companyUrl: "https://github.com",
+      logo: "/images/company/the-first-company.jpg",
+      companyUrl: "https://ots.vn/",
     },
   ],
 
